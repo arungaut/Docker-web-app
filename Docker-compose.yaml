@@ -1,0 +1,10 @@
+version: '3'
+services:
+  dbimage:
+    build: ./Docker-db
+    ports:
+    - 3306:3306
+  appimage:
+    build: ./Docker-app
+    ports:
+      -8088:8080
