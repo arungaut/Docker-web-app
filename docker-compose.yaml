@@ -1,11 +1,13 @@
 version: '3'
 services:
   dbimage:
+    container_name: devopsdb  # Custom name for DB container
     build: ./Docker-db
     ports:
       - "3306:3306"
 
   appimage:
+    container_name: devopsapp  # Custom name for App container
     build: ./Docker-app
     ports:
       - "8088:8080"
